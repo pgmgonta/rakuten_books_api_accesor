@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = RakutenBooksApiAccesor::VERSION
   spec.authors       = ["pgmgonta"]
   spec.email         = ["pgm.gonta@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{Rakuten Books API Accesor}
+  spec.summary       = %q{Rakuten Books API Accesor}
   spec.homepage      = ""
   spec.license       = "MIT"
 
@@ -19,5 +19,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_development_dependency "bundler", "~> 1.3"
+  spec.add_development_dependency "rspec"
+  spec.add_development_dependency "webmock"
   spec.add_development_dependency "rake"
 end
