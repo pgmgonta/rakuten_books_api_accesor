@@ -1,11 +1,8 @@
 require 'rakuten_books_api_accesor'
 require 'webmock'
-require 'simplecov'
+require 'spec_helper'
 
 describe RakutenBooksApiAccesor::HttpAccesor, "" do
-  before do
-    SimpleCov.start
-  end
 
   it "getBooks" do
     json_data = <<-END_JSON

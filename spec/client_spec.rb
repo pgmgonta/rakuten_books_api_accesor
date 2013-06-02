@@ -1,11 +1,8 @@
-require "rakuten_books_api_accesor"
-require "webmock"
-require 'simplecov'
+require 'rakuten_books_api_accesor'
+require 'webmock'
+require 'spec_helper'
 
 describe RakutenBooksApiAccesor, "" do
-  before do
-    SimpleCov.start
-  end
 
   it "initialize" do
     client = RakutenBooksApiAccesor::Client.create do | c |
