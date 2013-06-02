@@ -2,6 +2,7 @@
 
 RakutenBooksApiAccesor is Web-API wrapper. 
 RakutenBooksApiAccesor supported Rakuten Books API Version 2.
+
 Show detail http://webservice.rakuten.co.jp/api/booksbooksearch2/
 
 ## Installation
@@ -19,9 +20,15 @@ Or install it yourself as:
     $ gem install rakuten_books_api_accesor
 
 ## Usage
+  client = RakutenBooksApiAccesor::Client.create do | c |
+  c.application_id = "1234567890123" # Set Your ApplicationID
+  end
 
-
-
+  response = client.search(:title => "dog").json_data
+  items   = response["Items"]
+  items.each do | book |
+    # 
+  end
 
 ## Contributing
 
