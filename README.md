@@ -19,6 +19,7 @@ Or install it yourself as:
     $ gem install rakuten_books_api_accesor
 
 ## Usage
+    require 'rakuten_books_api_accesor'
 
     client = RakutenBooksApiAccesor::Client.create do | c |
     c.application_id = "1234567890123" # Set Your ApplicationID
