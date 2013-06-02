@@ -1,6 +1,8 @@
 # RakutenBooksApiAccesor
 
-TODO: Write a gem description
+RakutenBooksApiAccesor is Web-API wrapper. 
+RakutenBooksApiAccesor supported Rakuten Books API Version 2.
+Show detail http://webservice.rakuten.co.jp/api/booksbooksearch2/
 
 ## Installation
 
@@ -18,7 +20,8 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+
+
 
 ## Contributing
 
