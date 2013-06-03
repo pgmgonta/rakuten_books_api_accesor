@@ -3,9 +3,6 @@ require 'json'
 require 'open-uri'
 
 module RakutenBooksApiAccesor
-  HOST = "app.rakuten.co.jp"
-  PATH = "/services/api/BooksBook/Search/20130522"
-
 
   class HttpResponse
     attr_reader :code, :json_data
@@ -18,17 +15,11 @@ module RakutenBooksApiAccesor
   end
 
   class HttpAccesor
-    def self.get_books(config, args = {}) 
+    def self.get_json(host, path) 
 
-      keyword = ""
-      args.each do | k,v |
-        keyword = "#{keyword}&#{k}=#{URI.escape(v)}"
-      end
-
-      query         = "?applicationId=#{config.application_id}#{keyword}"
-      https         = Net::HTTP.new "#{HOST}", 443
+      https         = Net::HTTP.new "#{host}", 443
       https.use_ssl = true
-      result        = https.start { https.get "#{PATH}#{query}" }
+      result        = https.start { https.get "#{path}" }
 
       if result.code.to_i < 400 
         HttpResponse.new :code => result.code, :json_data => JSON.parse(result.body)
